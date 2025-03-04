@@ -1,13 +1,13 @@
-let a = prompt("Nhập số a: ");
-let b = prompt("Nhập số b: ");
-if (!isNaN(a) && !isNaN(b) && Number.isInteger(Number(a)) && Number.isInteger(Number(b))) {
-    a = Number(a);
-    b = Number(b);
+let a = +prompt("Nhập số a:");
+let b = +prompt("Nhập số b:");
+
+if (a == "" || b == "" || b < 0) {
+    console.log("Không hợp lệ");
+} else {
     let result = 1;
     for (let i = 0; i < b; i++) {
-        result *= a;
+        result *= a; 
     }
-    console.log(result);
-} else {
-    console.log("Không hợp lệ");
+
+    console.log("Kết quả:", result);
 }
