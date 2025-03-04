@@ -1,11 +1,12 @@
-let N = prompt("Nhập một chuỗi số nguyên: ");
-if (!isNaN(N) && Number.isInteger(Number(N))) {
-    let reversedN = N.split('').reverse().join('');
-    if (N === reversedN) {
-        console.log("Là số đối xứng");
-    } else {
-        console.log("Không phải số đối xứng");
-    }
+let number = prompt("Nhập vào một chuỗi số nguyên:");
+let reverse = ""; 
+
+for (let i = number.length - 1; i >= 0; i--) {
+    reverse += number[i];
+}
+
+if (number == reverse) {
+    alert(number + " là số đối xứng");
 } else {
-    console.log("Số không hợp lệ");
+    alert(number + " không phải là số đối xứng");
 }
