@@ -1,18 +1,17 @@
-let N = prompt("Nhập một số nguyên: ");
-if (!isNaN(N) && Number.isInteger(Number(N)) && Number(N) > 1) {
-    N = Number(N);
-    let isPrime = true;
-    for (let i = 2; i <= Math.sqrt(N); i++) {
-        if (N % i === 0) {
-            isPrime = false;
-            break;
+let n = +prompt("Nhập vào một số:");
+if (n <= 1) {
+    console.log("Không hợp lệ");
+} else {
+    let dem = 0;
+
+    for (let i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            dem++;
         }
     }
-    if (isPrime) {
-        console.log("Là số nguyên tố");
+    if (dem == 2) {
+        console.log(n + " là số nguyên tố");
     } else {
-        console.log("Không phải là số nguyên tố");
+        console.log(n + " không phải là số nguyên tố");
     }
-} else {
-    console.log("Không hợp lệ");
 }
