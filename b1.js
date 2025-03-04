@@ -1,11 +1,11 @@
-let N = prompt("Nhập một số nguyên dương: ");
-if (!isNaN(N) && Number.isInteger(Number(N)) && Number(N) > 0) {
-    N = Number(N);
-    let tong = 0;
+let N = +prompt("Nhập vào số nguyên N: ");
+let sum = 0;
+
+if (N > 0) {
     for (let i = 1; i <= N; i++) {
-        tong += i;
+        sum += i;
     }
-    console.log(tong);
+    alert("Tổng các số từ 1 đến " + N + " là: " + sum);
 } else {
-    console.log("dữ liệu nhập vào không hợp lệ");
+    alert("Vui lòng nhập số nguyên dương!");
 }
